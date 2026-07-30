@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Peak Digital Solutions | Elite Local SEO & Stacking Agency</title>
+    <meta name="description" content="Dominate local search rankings with Blue Peak Digital Solutions. Experts in Local Citations, Cloud Stacking, Google Stacking, and Google Business Profile Optimization.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Decap CMS Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --primary-light: #1E293B;
+            --accent: #2563EB;
+            --accent-hover: #1D4ED8;
+            --cyan: #06B6D4;
+            --text-main: #334155;
+            --text-dark: #0F172A;
+            --bg-light: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --border-color: #E2E8F0;
+            --gradient: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, .logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 1.5rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--accent);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .hero h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            color: #64748B;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header p {
+            color: #64748B;
+            font-size: 1.05rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #64748B;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            background: var(--primary);
+            color: #FFFFFF;
+            padding: 3.5rem 2.5rem;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            color: #FFFFFF;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: #94A3B8;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-item-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-item-text label {
+            display: block;
+            font-size: 0.8rem;
+            color: #94A3B8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item-text a, .contact-item-text span {
+            font-weight: 600;
+            color: #FFFFFF;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: #64748B;
+            font-size: 0.9rem;
+            background: #FFFFFF;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+            .contact-container { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                ⚡ Blue Peak <span>Digital</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <span class="hero-badge">🚀 High Impact Local SEO & Entity Stacking</span>
+        <h1>Dominating Local Search & <span>Google 3-Pack Rankings</span></h1>
+        <p>Blue Peak Digital Solutions provides cutting-edge Local SEO, Authority Entity Stacking, and Google Business Profile Growth tactics engineered for maximum visibility and sustainable organic lead generation.</p>
+        <div>
+            <a href="#services" class="btn btn-primary" style="margin-right: 10px;">Explore Services</a>
+            <a href="#contact" class="btn" style="background: #E2E8F0; color: var(--primary);">Contact Agency</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2>About Blue Peak Digital Solutions</h2>
+            <p>Empowering local brands, agencies, and enterprise enterprises with proven search engine dominance.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Who We Are</h3>
+                <p>Blue Peak Digital Solutions is a performance-driven SEO and digital growth agency specializing in high-level Google Map Pack optimization and advanced entity authority stacking. With specialized internal workflow automation and dedicated citation infrastructure, we deliver measurable, high-ROI search visibility.</p>
+            </div>
+            <div class="about-card">
+                <h3>Our Core Expertise</h3>
+                <p>We don't rely on generic marketing templates. We leverage proven algorithmic stacking strategies—combining custom Google Cloud authority properties with localized geographic citations—to push businesses straight into the Google top 3-pack.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-header">
+            <h2>Our Specialized Services</h2>
+            <p>Engineered for high rankings, verified trust, and consistent organic customer inquiries.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📌</div>
+                <h3>Local Citations</h3>
+                <p>Comprehensive NAP (Name, Address, Phone) consistency building across high-authority hyper-local directories to cement geographic trust.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">☁️</div>
+                <h3>Cloud Stacking</h3>
+                <p>Strategic deployment of authoritative HTML properties on AWS, Google Cloud, Microsoft Azure, and Backblaze to pass massive entity relevance to your domain.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Google Stacking</h3>
+                <p>Exploiting Google's own ecosystem (Drive, Docs, Sheets, Maps, Earth) to build interlinked authority stacks that search algorithms naturally prioritize.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📍</div>
+                <h3>Google Business Profile</h3>
+                <p>Complete GBP Management: 3-Pack ranking boost, full profile optimization, geo-grid optimization, and profile renting solutions for maximum lead capture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's Scale Your Business Online</h2>
+                <p>Ready to dominate your local market? Reach out directly to our team for specialized campaign setups and dedicated support.</p>
+                
+                <div class="contact-item">
+                    <div class="contact-item-icon">📞</div>
+                    <div class="contact-item-text">
+                        <label>Phone / WhatsApp</label>
+                        <a href="tel:+923324845299">+92 332 4845299</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-item-icon">✉️</div>
+                    <div class="contact-item-text">
+                        <label>Official Email</label>
+                        <a href="mailto:rayyankhan882244@gmail.com">rayyankhan882244@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                <h3 style="color:#FFF; margin-bottom:1rem;">Fast Agency Inquiry</h3>
+                <p style="color:#94A3B8; font-size:0.95rem; margin-bottom:1.5rem;">Have a project or custom bulk citation request? Contact us directly via WhatsApp or Email for instant onboarding.</p>
+                <a href="https://wa.me/923324845299" target="_blank" class="btn btn-primary" style="display:block; text-align:center; width:100%;">Message on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Blue Peak Digital Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Identity Redirect Script for CMS -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>
